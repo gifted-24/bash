@@ -5,7 +5,7 @@ command="${1}"
 
 case "${command}" in
 	push)
-		git pull -u origin main --rebase
+		git pull origin main --rebase
 		git ${args}
 	;;
 	*) git ${args} ;;
