@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+args=${@}
+command="${1}"
+
+case "${command}" in
+	push)
+		git pull -u origin main --rebase
+		git ${args}
+	;;
+	*) git ${args} ;;
+esac
