@@ -7,3 +7,18 @@ tmux_activate() {
         tmux a
     fi
 }
+
+load_action() {
+    for _ in "${1}"; do
+        if [[ -f "${_}" ]]; then
+            . "${_}"
+        fi
+    done
+}
+
+load_file() {
+    case "${1}" in
+        "-s"|"--same-dir")                                                        path="${2}"; shift
+            for _ in "${@}"; do                                                       load_action "${path}/${_}"
+            done                                                              ;;                                                                    *) load_action ${@};;
+    esac                                                              }

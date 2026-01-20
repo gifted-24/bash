@@ -1,8 +1,14 @@
 #!/usr/bin/env sh
+
+export PATH="${HOME}/local/bin:${PATH}"
+. ~/local/alias
+. ~/local/func
+
+export EDITOR=nano
 eval $(ssh-agent -s)
 ssh-add "$HOME/.ssh/id_ed25519"
+
 export TZ='Africa/Lagos'
-export COURSERA="~/sdcard/coursera"
 unset TMUX
 
 export PS1="\[\e[0m\]\[\e[38;5;35m\]╭─(\[\e[38;5;38m\]\t\[\e[38;5;35m\])-(\[\e[38;5;38m\]\j\[\e[38;5;35m\])-(\[\e[38;5;38m\]\H\[\e[38;5;35m\])-(\[\e[38;5;38m\]\w\[\e[38;5;35m\])\n\[\e[38;5;35m\]╰─% \[\e[0m\]"
