@@ -4,9 +4,9 @@ sudo_args=${@}
 command=${1}; shift
 
 case "${command}" in
-	"apt")
+	apt)
 		case "${1}" in
-			"update") /usr/bin/sudo ${sudo_args};;
+			update) /usr/bin/sudo ${sudo_args};;
 			*)
 				/usr/bin/sudo apt update
 				/usr/bin/sudo ${sudo_args}
