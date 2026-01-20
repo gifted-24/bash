@@ -1,0 +1,8 @@
+alias ws='cd $HOME/workspace'
+alias yt=". ~/.download/.venv/bin/activate && cd ${YT}"
+alias cr=". ~/.download/.venv/bin/activate && cd ${COURSERA}"
+alias nano="nano -Simx -T 4"
+alias yt-dlp="yt && yt-dlp --no-warnings"
+alias coursera-helper="cr && coursera-helper --resume --video-resolution '720p' --cauth ${CAUTH}"
+alias man="man_nano"
+alias sudo="mysudo"
