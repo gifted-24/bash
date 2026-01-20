@@ -1,12 +1,9 @@
 #!/usr/bin/bash
 
-args=${@}
-command="${1}"
-
-case "${command}" in
+case "${1}" in
 	push)
 		git pull origin main --rebase
-		git ${args}
+		git "${@}"
 	;;
-	*) git ${args} ;;
+	*) git "${@}" ;;
 esac
