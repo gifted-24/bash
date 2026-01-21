@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-/usr/bin/man "${@}" > manual.tmp && nano -Simx -T 4 -v manual.tmp; rm manual.tmp
+/usr/bin/man "${@}" > manual.tmp && nano -Simx -T 4 -v manual.tmp
+rm manual.tmp
