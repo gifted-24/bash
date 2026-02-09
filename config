@@ -8,7 +8,7 @@ export EDITOR=nano
 
 if [ ! -f  ~/.tmux.conf ]; then
 	cp ~/local/tmux.conf ~/.tmux.conf
-	rm ~/local/tmux.conf
+	rm -rf ~/local/tmux.conf
 fi
 export TZ='Africa/Lagos'
 unset TMUX
