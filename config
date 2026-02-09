@@ -5,8 +5,11 @@ export PATH="${HOME}/local/bin:${PATH}"
 . ~/local/func
 
 export EDITOR=nano
-cp ~/local/tmux.conf ~/.tmux.conf
-rm ~/local/tmux.conf
+
+if [ ! -f  ~/.tmux.conf ]; then
+	cp ~/local/tmux.conf ~/.tmux.conf
+	rm ~/local/tmux.conf
+fi
 export TZ='Africa/Lagos'
 unset TMUX
 
