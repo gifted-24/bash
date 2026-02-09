@@ -5,9 +5,7 @@ export PATH="${HOME}/local/bin:${PATH}"
 . ~/local/func
 
 export EDITOR=nano
-eval $(ssh-agent -s)
-ssh-add "$HOME/.ssh/id_ed25519"
-
+cp ./local/tmux.conf ~/.tmux.conf
 export TZ='Africa/Lagos'
 unset TMUX
 

@@ -2,8 +2,11 @@ alias ws='cd $HOME/workspace'
 alias yt=". ~/.download/.venv/bin/activate && cd ${YT}"
 alias cr=". ~/.download/.venv/bin/activate && cd ${COURSERA}"
 alias nano="nano -Simx -T 4"
-alias yt-dlp="yt && yt-dlp --no-warnings"
+alias yt-dlp="yt && yt-dlp --no-warnings -f bv[height=720]+ba/b[height=720]/bv[height=960]+ba/b[height=960]/bv+ba/b"
 alias coursera-helper="cr && coursera-helper --resume --video-resolution '720p' --cauth ${CAUTH}"
 alias man="man_nano"
 alias sudo="mysudo"
 alias git="mygit"
+ytv() {
+	curl -s https://pypi.org/pypi/yt-dlp/json | python3 -c "import sys, json; print('\n'.join(sorted(json.load(sys.stdin)['releases'].keys(), reverse=True)))" | head -n 20
+}
