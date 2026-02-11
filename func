@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 tmux_activate() {
     if ! tmux ls 2>/dev/null 1>/dev/null; then
